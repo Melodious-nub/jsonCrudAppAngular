@@ -1,0 +1,69 @@
+{
+    "productList": [{
+            "productName": "Apple",
+            "productDropdown": "electronic",
+            "productDate": "2022-05-16",
+            "productFresh": "",
+            "exampleRadios": "sechand",
+            "productPrice": 200,
+            "productCom": "Look and performance as new",
+            "id": 1
+        },
+        {
+            "productName": "Samsung",
+            "productDropdown": "electronic",
+            "productDate": "2022-05-01",
+            "productFresh": "",
+            "exampleRadios": "refub",
+            "productPrice": 150,
+            "productCom": "refubrished",
+            "id": 2
+        },
+        {
+            "productName": "Babul",
+            "productDropdown": "fruits",
+            "productDate": "2022-05-03",
+            "productFresh": "bnew",
+            "exampleRadios": "",
+            "productPrice": 12,
+            "productCom": "From tree",
+            "id": 3
+        },
+        {
+            "productName": "Kashem",
+            "productDropdown": "vegetables",
+            "productDate": "2022-05-02",
+            "productFresh": "",
+            "exampleRadios": "sechand",
+            "productPrice": 50,
+            "productCom": "333",
+            "id": 4
+        },
+        {
+            "productName": "Apple 2",
+            "productDropdown": "electronic",
+            "productDate": "2022-05-03",
+            "productFresh": "sechand",
+            "productPrice": 22,
+            "productCom": "bad",
+            "id": 5
+        },
+        {
+            "productName": "Apple",
+            "productDropdown": "electronic",
+            "productDate": "2022-05-01",
+            "productFresh": "sechand",
+            "productPrice": 50,
+            "productCom": "sss",
+            "id": 6
+        }
+    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}

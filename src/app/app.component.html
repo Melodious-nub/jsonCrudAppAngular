@@ -15,13 +15,88 @@
                 <h5 class="modal-title" id="exampleModalLabel">Add Product Form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
-            </div>
+
+            <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input ngModel #productName="ngModel" name="productName" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" required>
+                    </div>
+
+                    <label>Product Category</label>
+                    <select ngModel #productDropdown="ngModel" name="productDropdown" class="form-select mb-3" aria-label="Default select example">
+                  <option value="fruits">Fruits</option>
+                  <option value="vegetables">Vegetables</option>
+                  <option value="electronic">Electronic</option>
+                </select>
+
+                    <div class="mb-3">
+                        <input ngModel #productDate="ngModel" name="productDate" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Chose a date">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="mb-2" style="font-size: larger;"> Product FressNess</label>
+                        <div class="form-check">
+                            <input ngModel class="form-check-input" type="radio" name="productFresh" id="exampleRadios1" value="bnew">
+                            <label class="form-check-label" for="exampleRadios1">
+                    Brnd New
+                  </label>
+                        </div>
+                        <div class="form-check">
+                            <input ngModel class="form-check-input" type="radio" name="productFresh" id="exampleRadios2" value="sechand">
+                            <label class="form-check-label" for="exampleRadios2">
+                    Second Hand
+                  </label>
+                        </div>
+                        <div class="form-check">
+                            <input ngModel class="form-check-input" type="radio" name="productFresh" id="exampleRadios3" value="refub">
+                            <label class="form-check-label" for="exampleRadios3">
+                    Refubrished
+                  </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input ngModel #productPrice="ngModel" name="productPrice" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Price">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea ngModel #productCom="ngModel" name="productCom" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comments"></textarea>
+                    </div>
+                </div>
+                <!-- end modal body -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="post" id="post" class="btn btn-primary" value="post" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+
         </div>
     </div>
+</div>
+
+<div class="container" style="margin-top: 20px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+                <th scope="col">FressNess</th>
+                <th scope="col">Price</th>
+                <th scope="col">Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of post">
+                <th scope="row">{{list.id}}</th>
+                <td>{{list.productName}}</td>
+                <td>{{list.productDropdown}}</td>
+                <td>{{list.productDate | date}}</td>
+                <td>{{list.productFresh}}</td>
+                <td>{{list.productPrice | currency}}</td>
+                <td>{{list.productCom}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
