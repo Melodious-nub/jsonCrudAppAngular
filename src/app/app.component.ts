@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { from } from 'rxjs/internal/observable/from';
 import { ApiService } from './services/api.service';
 
@@ -10,18 +11,17 @@ import { ApiService } from './services/api.service';
 export class AppComponent implements OnInit {
   title = 'JsonCrudApp';
   post:any = [];
-
   editValue:any = [];
-
-
   actionBtn = 'Save';
+
+  @ViewChild('postForm')postForm!: NgForm; 
 
   constructor(private api: ApiService) { }
   ngOnInit(): void {
     this.getAllProduct();
   }
 
-  onSubmit(postForm: any) {
+  onSubmit(postForm: NgForm) {
     if(postForm.valid){
       this.api.postProduct(postForm.value).subscribe(
         {next:(res)=>{
@@ -49,8 +49,9 @@ export class AppComponent implements OnInit {
     editProduct(data: any) {
       this.actionBtn = 'Update';
 
+      // for populating data
+      this.postForm.form.setValue(data)
        console.log(data);
-       
     }
 
     deleteProduct(id: number) {
