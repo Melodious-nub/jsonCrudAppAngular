@@ -9,7 +9,12 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent implements OnInit {
   title = 'JsonCrudApp';
-  post:any = []
+  post:any = [];
+
+  editValue:any = [];
+
+
+  actionBtn = 'Save';
 
   constructor(private api: ApiService) { }
   ngOnInit(): void {
@@ -21,7 +26,9 @@ export class AppComponent implements OnInit {
       this.api.postProduct(postForm.value).subscribe(
         {next:(res)=>{
         alert("Prodect Added successfully");
+        this.actionBtn;
         postForm.reset();
+        this.getAllProduct();
       },error:()=>{
         alert("errror while adding the product")
       }
@@ -35,6 +42,25 @@ export class AppComponent implements OnInit {
         this.post = res;
       },error:()=>{
         alert("errror while fetching the product")
+      }
+    })
+    }
+
+    editProduct(data: any) {
+      this.actionBtn = 'Update';
+
+       console.log(data);
+       
+    }
+
+    deleteProduct(id: number) {
+      this.api.deleteProduct(id).subscribe({next:(res)=>{
+        console.log(res);
+        alert("Prodect Deleted successfully");
+        // for auto refresh api
+        this.getAllProduct();    
+      },error:()=>{
+        alert("Error while deleting the product!!")
       }
     })
     }

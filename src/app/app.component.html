@@ -19,12 +19,12 @@
             <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <input ngModel #productName="ngModel" name="productName" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" required>
+                        <input ngModel #productName="ngModel" name="productName" [(ngModel)]="editValue.productName" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" required>
                     </div>
 
                     <label>Product Category</label>
                     <select ngModel #productDropdown="ngModel" name="productDropdown" class="form-select mb-3" aria-label="Default select example">
-                  <option value="fruits">Fruits</option>
+                  <option value="fruits" selected>Fruits</option>
                   <option value="vegetables">Vegetables</option>
                   <option value="electronic">Electronic</option>
                 </select>
@@ -66,7 +66,7 @@
                 <!-- end modal body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" name="post" id="post" class="btn btn-primary" value="post" class="btn btn-primary">Save</button>
+                    <button type="submit" name="post" id="post" class="btn btn-primary" value="post" class="btn btn-primary">{{actionBtn}}</button>
                 </div>
             </form>
 
@@ -85,6 +85,7 @@
                 <th scope="col">FressNess</th>
                 <th scope="col">Price</th>
                 <th scope="col">Comments</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -96,6 +97,10 @@
                 <td>{{list.productFresh}}</td>
                 <td>{{list.productPrice | currency}}</td>
                 <td>{{list.productCom}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editProduct(list)">Edit</button>
+                    <button type="submit" name="post" id="post" class="btn btn-primary" value="post" class="btn btn-danger" (click)="deleteProduct(list.id)">Del</button>
+                </td>
             </tr>
         </tbody>
     </table>

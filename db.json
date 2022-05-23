@@ -1,61 +1,39 @@
 {
     "productList": [{
-            "productName": "Apple",
+            "productName": "Walton",
             "productDropdown": "electronic",
-            "productDate": "2022-05-16",
-            "productFresh": "",
-            "exampleRadios": "sechand",
-            "productPrice": 200,
-            "productCom": "Look and performance as new",
-            "id": 1
-        },
-        {
-            "productName": "Samsung",
-            "productDropdown": "electronic",
-            "productDate": "2022-05-01",
-            "productFresh": "",
-            "exampleRadios": "refub",
-            "productPrice": 150,
-            "productCom": "refubrished",
-            "id": 2
-        },
-        {
-            "productName": "Babul",
-            "productDropdown": "fruits",
-            "productDate": "2022-05-03",
+            "productDate": "2020-01-02",
             "productFresh": "bnew",
-            "exampleRadios": "",
-            "productPrice": 12,
-            "productCom": "From tree",
-            "id": 3
+            "productPrice": 100,
+            "productCom": "Not bad",
+            "id": 10
         },
         {
             "productName": "Kashem",
             "productDropdown": "vegetables",
-            "productDate": "2022-05-02",
-            "productFresh": "",
-            "exampleRadios": "sechand",
-            "productPrice": 50,
-            "productCom": "333",
-            "id": 4
+            "productDate": "2022-05-22",
+            "productFresh": "bnew",
+            "productPrice": 23,
+            "productCom": "fdd",
+            "id": 11
         },
         {
-            "productName": "Apple 2",
-            "productDropdown": "electronic",
-            "productDate": "2022-05-03",
-            "productFresh": "sechand",
-            "productPrice": 22,
-            "productCom": "bad",
-            "id": 5
+            "productName": "Sifat",
+            "productDropdown": "fruits",
+            "productDate": "2022-05-22",
+            "productFresh": "refub",
+            "productPrice": 60,
+            "productCom": "aa",
+            "id": 12
         },
         {
-            "productName": "Apple",
-            "productDropdown": "electronic",
-            "productDate": "2022-05-01",
+            "productName": "Babul",
+            "productDropdown": "vegetables",
+            "productDate": "2022-05-22",
             "productFresh": "sechand",
-            "productPrice": 50,
-            "productCom": "sss",
-            "id": 6
+            "productPrice": 2,
+            "productCom": "ww",
+            "id": 13
         }
     ],
     "comments": [{
