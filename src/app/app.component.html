@@ -19,7 +19,7 @@
             <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <input ngModel #productName="ngModel" name="productName" [(ngModel)]="editValue.productName" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" required>
+                        <input ngModel #productName="ngModel" name="productName" [ngModel]="editValue.productName" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" required>
                     </div>
 
                     <label>Product Category</label>
@@ -98,7 +98,7 @@
                 <td>{{list.productPrice | currency}}</td>
                 <td>{{list.productCom}}</td>
                 <td>
-                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editProduct(list)">Edit</button>
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editProduct(list, list.id)">Edit</button>
                     <button type="submit" name="post" id="post" class="btn btn-primary" value="post" class="btn btn-danger" (click)="deleteProduct(list.id)">Del</button>
                 </td>
             </tr>

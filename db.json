@@ -1,47 +1,59 @@
 {
-    "productList": [{
-            "productName": "Walton",
-            "productDropdown": "electronic",
-            "productDate": "2020-01-02",
-            "productFresh": "bnew",
-            "productPrice": 100,
-            "productCom": "Not bad",
-            "id": 10
-        },
-        {
-            "productName": "Kashem",
-            "productDropdown": "vegetables",
-            "productDate": "2022-05-22",
-            "productFresh": "bnew",
-            "productPrice": 23,
-            "productCom": "fdd",
-            "id": 11
-        },
-        {
-            "productName": "Sifat",
-            "productDropdown": "fruits",
-            "productDate": "2022-05-22",
-            "productFresh": "refub",
-            "productPrice": 60,
-            "productCom": "aa",
-            "id": 12
-        },
-        {
-            "productName": "Babul",
-            "productDropdown": "vegetables",
-            "productDate": "2022-05-22",
-            "productFresh": "sechand",
-            "productPrice": 2,
-            "productCom": "ww",
-            "id": 13
-        }
-    ],
-    "comments": [{
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-    }],
-    "profile": {
-        "name": "typicode"
+  "productList": [
+    {
+      "productName": "Walton",
+      "productDropdown": "electronic",
+      "productDate": "2020-01-02",
+      "productFresh": "bnew",
+      "productPrice": 100,
+      "productCom": "Not bad",
+      "id": 10
+    },
+    {
+      "productName": "Kashem",
+      "productDropdown": "vegetables",
+      "productDate": "2022-05-22",
+      "productFresh": "bnew",
+      "productPrice": 23,
+      "productCom": "fdd",
+      "id": 11
+    },
+    {
+      "productName": "Sifat",
+      "productDropdown": "fruits",
+      "productDate": "2022-05-22",
+      "productFresh": "refub",
+      "productPrice": 60,
+      "productCom": "aa",
+      "id": 12
+    },
+    {
+      "productName": "Babul",
+      "productDropdown": "vegetables",
+      "productDate": "2022-05-22",
+      "productFresh": "sechand",
+      "productPrice": 2,
+      "productCom": "ww",
+      "id": 13
+    },
+    {
+      "productName": "Apple",
+      "productDropdown": "electronic",
+      "productDate": "2022-05-24",
+      "productFresh": "bnew",
+      "productPrice": 299,
+      "productCom": "nice",
+      "id": 14
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
